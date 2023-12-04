@@ -137,7 +137,7 @@ def update_output_container(selected_statistics, input_year):
 
 # TASK 2.6: Create and display graphs for Yearly Report Statistics
  # Yearly Statistic Report Plots                             
-    elif (input_year and selected_statistics=='Yearly Statistics Report') :
+    elif (input_year and selected_statistics=='Yearly Statistics') :
         yearly_data = data[data['Year'] == input_year]
                               
 #TASK 2.5: Creating Graphs Yearly data
@@ -165,7 +165,7 @@ def update_output_container(selected_statistics, input_year):
             # Plot bar chart for average number of vehicles sold during the given year
         avr_vdata=yearly_data.groupby('Vehicle_Type')['Automobile_Sales'].mean().reset_index()
         Y_chart3 = dcc.Graph(
-            figure=ps.bar(avr_vdata,
+            figure=px.bar(avr_vdata,
             x='Vehicle_Type',
             y='Automobile_Sales',
             title='Average Vehicles Sold by Vehicle Type in the year {}'.format(input_year)))
