@@ -42,8 +42,8 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='dropdown-statistics',
             options=[
-                {'label1': 'Yearly Statistics', 'value': 'Yearly Statistics'},
-                {'label1': 'Recession Period Statistics', 'value': 'Recession Period Statistics'}
+                {'label': 'Yearly Statistics', 'value': 'Yearly Statistics'},
+                {'label': 'Recession Period Statistics', 'value': 'Recession Period Statistics'}
                     ],
             value='Select Statistics',
             placeholder='Select a report type'
